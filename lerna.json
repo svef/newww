@@ -1,0 +1,22 @@
+{
+  "npmClient": "yarn",
+  "command": {
+    "init": {
+      "exact": true
+    },
+    "publish": {
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "message": "chore(release): Publish %s",
+      "ignoreChanges": [
+        "**/ignored-folder/**",
+        "**/*.md"
+      ]
+    }
+  },
+  "packages": [
+    "applications/*",
+    "library/*"
+  ],
+  "version": "independent"
+}

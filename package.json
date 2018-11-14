@@ -1,0 +1,48 @@
+{
+  "name": "@svef/www",
+  "private": true,
+  "author": {
+    "name": "Samtök vefiðnaðarins",
+    "email": "svef@svef.is",
+    "url": "https://www.svef.is"
+  },
+  "contributors": [
+    {
+      "name": "Benedikt D Valdez",
+      "email": "hi@valdez.is",
+      "url": "https://www.valdez.is"
+    }
+  ],
+  "workspaces": [
+    "applications/**",
+    "library/**"
+  ],
+  "scripts": {},
+  "devDependencies": {
+    "husky": "^1.1.4",
+    "lerna": "3.4.3",
+    "lint-staged": "^8.0.4",
+    "prettier": "^1.15.2"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "semi": false,
+    "useTabs": false
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
